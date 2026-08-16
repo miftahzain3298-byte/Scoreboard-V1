@@ -1,0 +1,18 @@
+Button	          |  Pin	  |  Type
+------------------|---------|-------------
+Team A +1	        | 13	    | INPUT_PULLUP
+Team A -1         | 12	    | INPUT_PULLUP
+Team B +1	        | 10	    | INPUT_PULLUP
+Team B -1	        | 9	      | INPUT_PULLUP
+Global Reset	    | 8	      | INPUT_PULLUP
+Penalty Goal 1    | 5	      | INPUT_PULLUP
+Penalty Miss 1    | 6	      | INPUT_PULLUP
+Penalty Goal 2	  | 7	      | INPUT_PULLUP
+Penalty Miss 2	  | 4       |	INPUT_PULLUP
+Timer Play/Pause	| 27	    | INPUT_PULLUP
+Period Toggle	    | 26	    | INPUT_PULLUP
+
+
+ARDUINO PIN ────┬───[Button]───┬─── GND
+                │              │
+                └─── (Internal pull-up, no external resistor needed)
