@@ -3,7 +3,13 @@
 │                     (Arduino Mega 1 + 11 Push Buttons)                 │
 └─────────────────────────────────────────────────────────────────────────┘
                                     │
-                                    ▼ Serial2 (TX/RX)
+                                    ▼ Serial2 (5V)
+                        ┌─────────────────────────┐
+                        │  LOGIC LEVEL CONVERTER  │
+                        │   (5V ↔ 3.3V)           │
+                        └─────────────────────────┘
+                                    │
+                                    ▼ Serial2 (3.3V)
 ┌─────────────────────────────────────────────────────────────────────────┐
 │                            ESP32 – SENDER                              │
 │         (Receives data from Arduino Mega, publishes to MQTT)           │
@@ -15,7 +21,13 @@
 │           (Subscribes to MQTT, forwards data to Arduino Mega)          │
 └─────────────────────────────────────────────────────────────────────────┘
                                     │
-                                    ▼ Serial2 (TX/RX)
+                                    ▼ Serial2 (3.3V)
+                        ┌─────────────────────────┐
+                        │  LOGIC LEVEL CONVERTER  │
+                        │   (3.3V ↔ 5V)           │
+                        └─────────────────────────┘
+                                    │
+                                    ▼ Serial1 (5V)
 ┌─────────────────────────────────────────────────────────────────────────┐
 │                         ARDUINO MEGA – DISPLAY                         │
 │     (Drives 7-segment scores, timer, period, penalty LED arrays)       │
