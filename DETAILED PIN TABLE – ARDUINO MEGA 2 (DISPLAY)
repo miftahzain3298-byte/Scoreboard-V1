@@ -1,0 +1,13 @@
+Shift Register Pin Mapping
+
+Function	     | Pin	    | Shift Register	| Chain Order
+---------------|----------|-----------------|------------
+Score Latch	   | 10	      | 74HC595	        | 4 digits 
+Score Clock	   | 11	      | 74HC595	        | 4 digits 
+Score Data	   | 12	      | 74HC595	        | 4 digits 
+Timer Latch	   | 25	      | 74HC595	        | 5 digits 
+Timer Clock	   | 23	      | 74HC595	        | 5 digits 
+Timer Data	   | 27	      | 74HC595	        | 5 digits 
+Penalty Latch	 | 5	      | 74HC595	        | 4 x 8 LEDs
+Penalty Clock	 | 6	      | 74HC595	        | 4 x 8 LEDs
+Penalty Data	 | 4	      | 74HC595	        | 4 x 8 LEDs
